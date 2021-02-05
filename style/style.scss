@@ -85,12 +85,12 @@ body{
 ////////////////////////////////////////////////////////////////////////////////////////
 
 .what_are_smoothies{
-    display: none !important;
-    padding:5% 20%;
+    display: flex;flex-direction: column;
+    padding:5% 5%;
     text-align: center;
     .title-h2{
         font-weight: 700;
-        font-size: 3.1rem;
+        font-size: 35px;
         color:$tangerin;
     }
     .after-title{
@@ -103,10 +103,12 @@ body{
 .details{
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
-    
     &-item{
         padding:10% 0%;
         align-items: center;
+        img{
+            object-fit: contain;
+        }
         span{
             display: block;
             padding-top: 5%;
@@ -141,34 +143,35 @@ body{
     }
 }
 .about{
-    display: none;
-    // display: grid;
-    grid-template: 1fr 1fr/repeat(4,1fr);
+    display: grid;
+    grid-template: 1fr 0.7fr/repeat(4,1fr);
     &-item{
         &-01{
-        height: 80vh;
+            //height: 80vh;
             padding-bottom: 10%;
             grid-column-start: span 2;
             background-color: #168274;
             .about-picture{
                 border:5px solid $light;
                 width: 60%;
-                height:auto ;
-                margin-top: 15%;
-                margin-left: 15%;
+                height:auto;
+                object-fit: contain;
+                position: relative;
+                top:10vh;
+                left:10vw;
                 transform: rotate(5deg);
             }
         }
         &-02{
-            height: 80vh;
-            padding-bottom: 10%;
-            padding-right: 15%;
+            padding: 30px;
             grid-column-start: span 2;
             background-color: #168274;
-            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
             h2{
                 color: $light;
-                font-size: 3.4rem;
+                font-size: 25px;
                 span{
                     color:#cae941;
                     background-image: url(../img/3-About/span-line.png);
@@ -180,9 +183,8 @@ body{
             ul{
                 list-style-type: none;
                 padding-left: 0;
-                padding-bottom: 5%;
                 li{
-                    font-size: 1.3125rem;
+                    font-size: 20px;
                     padding-bottom: 2%;
                     .span-01{
                         vertical-align: top;
@@ -205,48 +207,84 @@ body{
             padding-bottom: 6%;
         }
         &-03{
-            padding-top: 2%;
+            padding: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
             color:$light;
             font-weight: 500;
-            padding-top: 35%;
             text-align: center;
             background-color: #622c15;
+            img{
+                object-fit: contain;
+                width: 60%;
+                margin: 0 auto;
+            }
         }
         &-04{
-            font-size: 1.125rem;
+            padding: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            
             color:$light;
             font-weight: 500;
-            padding-top: 35%;
             text-align: center;
             background-color: #198275;
+            img{
+                object-fit: contain;
+                width: 60%;
+                margin: 0 auto;
+            }
         }
         &-05{
-            font-size: 1.125rem;
+            padding: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            
             color:$light;
             font-weight: 500;
-            padding-top: 35%;
             text-align: center;
             background-color: #f9b13f;
+            img{
+                object-fit: contain;
+                width: 60%;
+                margin: 0 auto;
+            }
         }
         &-06{
-            font-size: 1.125rem;
+            padding: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
             color:$light;
             font-weight: 500;
-            padding-top: 35%;
             text-align: center;
             background-color: #c5461d;
+            img{
+                object-fit: contain;
+                width: 60%;
+                margin: 0 auto;
+            }
         }
     }
 }
 .about-link{
     border: 2px solid #f7ae3b;
     border-radius: 30px;
-    padding:2% 5% 2% 3%;
     text-decoration: none;
     color:$light;
-    
+    width: 300px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
     img{
-        padding-left:5%;
+        width: 10%;
+        object-fit: contain;
     }
 }
 .about-link-white{
@@ -257,7 +295,11 @@ body{
     color:$light;
     img{
         padding-left:5%;
+        width: 20%;
     }
+}
+.about-item-02 .title-h2{
+    padding-bottom:20px;
 }
 .our__story-section{
     display: none;
@@ -503,7 +545,7 @@ z-index: -1;
                 background-image: url(../img/9-Footer/mail.png);
                 background-repeat: no-repeat;
                 background-position: 3%, center;
-                background-size: 50%ж
+                background-size: 50%;
             }
             .follow{
                 width: 100%;

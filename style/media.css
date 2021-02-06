@@ -219,3 +219,9 @@
         grid-template: 1fr 0.5fr/repeat(4,1fr);
     }
 }
+@media(min-width:1000px){
+    .bottle{
+        width: 50% !important;
+        margin-bottom: 30px !important;
+    }
+}
